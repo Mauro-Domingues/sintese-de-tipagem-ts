@@ -9,10 +9,10 @@ let numeroQualquer: number;
 numeroQualquer = 10.5;
 
 let valor: number;
-valor = 'frase qualquer'; // não é válido
+//valor = 'frase qualquer'; // não é válido
 
 let fraseLegal = 'Carpe Diem'; // Detecta automaticamente uma string
-fraseLegal = 98.5; // não é válido a atribuição do tipo number para um tipo string.
+//fraseLegal = 98.5; // não é válido a atribuição do tipo number para um tipo string.
 
 let numberlist: number[ ] = [2, 3, 5, 7]; // Array somente de números
 
