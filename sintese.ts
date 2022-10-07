@@ -56,83 +56,88 @@ class ClasseBase {
 	
 	constructor(nome: string) {
 		this.nome = nome;
-	}
+	};
 	
 	print(msg: string = 'Classe Base') {
-		console.log(msg)
-	}
-}
+		console.log(msg);
+	};
+};
 
 class ClasseHerdeira extends ClasseBase {
 	
 	constructor(nome: string) {
-	 	super(nome)
-	}
+	 	super(nome);
+	};
 	
 	print(msg: string = 'Classe Herdeira') {
 		super.print(msg);
-	}
+	};
 
-}
+};
 
 // Encapsulamento
 
 class ClasseExemplo {
-	private _nome: string
+
+	private _nome: string;
+
+    constructor(_nome: string){
+        this._nome = _nome;
+    };
 	
 	get nome(): string {
 		return this._nome;
-		}
+	};
 
-	set nome(nome:string): void { // corrigir aqui
-		this._nome = nome;
-		}
-}
+	set nome(_nome:string) {
+		this._nome = _nome;
+	};
+};
 
 // Abstração
 
 abstract class ClasseAbstrata {
 	
 	constructor(public nome: string){
-	}
+	};
 
     printNome(): void {
-        console.log('Nome' + this.nome)
-    }
+        console.log('Nome' + this.nome);
+    };
 
     abstract otherPrint(): void; // deverá ser implementado nas classes filhas
-}
+};
 
 class ClasseFilhaAbs extends ClasseAbstrata {
 
 	constructor() {
 		super('Classe Filha Abs');
-	}
+	};
 
 	printNome(): void {
 		console.log('Classe Filha Abs');
-	}
+	};
 
 	otherPrint(): void {
 		console.log('Other print method');
-	}
+	};
 
-}
+};
 
 // Interfaces // Diferença que os métodos e atributos devem ser setados nas classes filhas
 
 interface ClasseInterface {
 	atributo1: string;
-	atriburo2?: number // ? significa que é opcional
+	atriburo2?: number; // ? significa que é opcional
 
-	print();
-}
+	print(): void;
+};
 
 class ClasseFilha implements ClasseInterface {
 	atributo1: string = 'Classe Filha';
 	atriburo2?: number = 1;
 	
 	print() {
-	console.log(this.atributo1);
-	}
-}
+	    console.log(this.atributo1);
+	};
+};
