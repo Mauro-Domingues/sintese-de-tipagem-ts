@@ -1,3 +1,10 @@
+// npm init -y
+// npm i typescript --save-dev
+// npx tsc --init -> cria o tsconfig.json, usar npx para buscar externamente
+// npm i @types/nome-da-extensão --save-dev -> Para fazer o ts reconhecer tipagens de extensões
+// npm ts-node-dev --sav-dev -> nodemon do ts
+// "tsc arquivo" para compilar ou "ts-node-dev arquivo" para rodar = adicionar no start/dev do package.json
+
 let numeroQualquer: number;
 numeroQualquer = 10.5;
 
